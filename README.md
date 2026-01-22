@@ -1,70 +1,94 @@
-# Doubly Linked List Implementation (Java)
+## 🔗 Re-Implementing a Doubly Linked List (OOP Course Project)
 
-This repository contains a clean and object-oriented implementation of a **Doubly Linked List** in Java, developed as part of an **Object-Oriented Programming (OOP)** course exercise.
+A complete **object-oriented implementation of a Doubly Linked List** in **Java**, developed as part of the **Object-Oriented Programming (OOP)** course at **Hubei University of Technology**.
+
+This project focuses on **data structure design**, **encapsulation**, **exception handling**, and **pointer manipulation** using Java classes and inheritance.
 
 ---
 
 ## 📌 Project Overview
 
-The goal of this project is to re-implement a doubly linked list by following a given abstract API.
-The implementation supports constant-time insertion, deletion, and traversal using a **sentinel (dummy) head node** to simplify edge cases.
+The goal of this project is to **re-implement a doubly linked list from scratch** by extending abstract base classes provided in the course exercise.
+
+The implementation strictly follows:
+
+* Object-oriented principles
+* Proper node validation
+* Safe insertion, deletion, and traversal operations
+
+A **sentinel (head) node** is used to simplify boundary conditions and improve robustness.
 
 ---
 
-## ✨ Features
+## 🎯 Objectives
 
-* Doubly linked list with **sentinel head node**
-* Insert elements at front and back
-* Insert before and after a given node
-* Remove nodes safely
-* Forward traversal using `toString()`
-* Proper exception handling for invalid nodes
-* Accurate list size management
+* Implement a fully functional **Doubly Linked List**
+* Apply **inheritance and abstraction**
+* Handle invalid node operations using **custom exceptions**
+* Strengthen understanding of **linked list internals**
+* Practice **clean and safe pointer manipulation**
 
 ---
 
-## 🧠 Design Decisions
+## 🧠 Key Concepts Used
 
-* **Sentinel Node**
-  A dummy head node is used so that the list is never truly empty.
-  This removes the need for special cases when inserting or deleting nodes.
+* Doubly Linked List data structure
+* Object-Oriented Programming (OOP)
+* Abstract classes & inheritance
+* Exception handling (`InvalidNodeException`)
+* Sentinel (dummy head) node
+* Encapsulation & data integrity
 
-* **Node Validity Checking**
-  A node is considered valid only when it belongs to a list (`myList != null`).
-  Removed nodes are explicitly invalidated.
+---
+
+## 🧾 Class Structure
+
+### Core Classes
+
+* `List` (Abstract)
+* `ListNode` (Abstract)
+* `DList` (Concrete implementation)
+* `DListNode` (Concrete node)
+* `InvalidNodeException`
+
+---
+
+## ⚙️ Implementation Highlights
+
+### ✔ DListNode Methods Implemented
+
+* `next()`
+* `prev()`
+* `insertBefore(Object item)`
+* `insertAfter(Object item)`
+* `remove()`
+
+### ✔ DList Methods Implemented
+
+* `insertFront(Object item)`
+* `insertBack(Object item)`
+* `front()`
+* `back()`
+* `toString()`
+
+---
+
+## 🧩 Design Decisions
+
+* **Sentinel Head Node**
+
+  * Eliminates special cases for empty lists
+  * Simplifies insertion and deletion logic
+
+* **Node Validation**
+
+  * Every operation checks if a node is valid
+  * Invalid operations throw `InvalidNodeException`
 
 * **Encapsulation**
-  `DListNode` handles node-level operations (insert, remove).
-  `DList` handles list-level responsibilities (size, front, back).
 
----
-
-## ⏱ Time Complexity
-
-| Operation                  | Complexity |
-| -------------------------- | ---------- |
-| insertFront / insertBack   | O(1)       |
-| insertBefore / insertAfter | O(1)       |
-| remove                     | O(1)       |
-| traversal                  | O(n)       |
-
----
-
-## 🛠 How to Compile and Run
-
-```bash
-javac list/*.java test/Test2.java
-java test.Test2
-```
-
----
-
-## 🧪 Sample Output
-
-```
-[ 1 1.5 2 3 4 5 5.5 6 ]
-[ 1.5 2 3 4 5 5.5 6 ]
-```
+  * Node references are managed internally
+  * External access is controlled via methods
 
 ---
 
@@ -80,28 +104,51 @@ Re-Implementing-a-doubly-Linked-lists/
 │   ├── DListNode.java
 │   └── InvalidNodeException.java
 │
-├── test/
-│   └── Test2.java
-│
+├── Test2.java
 └── README.md
 ```
 
 ---
 
-## 🎓 Course Information
+## ▶️ How to Run
 
-* **Course**: Object-Oriented Programming
-* **Institution**: Hubei University of Technology
-* **Academic Year**: 2021
+1. Compile all Java files:
+
+```bash
+javac list/*.java Test2.java
+```
+
+2. Run the test program:
+
+```bash
+java Test2
+```
 
 ---
 
-## ✍ Author
+## 🧪 Sample Output
 
-**Md Fahim Muntasir**
-Computer Science & Technology
+```
+[ 1  1.5  2  3  4  5  5.5  6 ]
+[ 1.5  2  3  4  5  5.5  6 ]
+```
 
 ---
 
+## 🏫 Academic Information
 
-Just tell me 👌
+* **Course:** Object-Oriented Programming
+* **University:** Hubei University of Technology
+* **Student Name:** Muntasir Md Fahim (王一然)
+* **Student ID:** 1911521213
+* **Class:** 19lq CST
+* **Date:** December 2021
+
+---
+
+## 📜 License
+
+This project was developed for **academic and educational purposes**.
+Free to use for learning and reference with proper attribution.
+
+---
